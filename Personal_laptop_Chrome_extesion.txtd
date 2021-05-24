@@ -1,0 +1,124 @@
+[ FreeCourseWeb.com ] Udemy - Google Chrome Extension Development From Beginning [2021]
+
+	by Thomas Mikula
+__________________________________________________________________________________________________________________________________________________________
+
+S1E1
+
+	Intro
+
+__________________________________________________________________________________________________________________________________________________________
+
+S1E2
+
+	get most of it
+
+		==>your own pace
+		==>rewatch if nodded
+		==>use vdeo controls
+		===>take notes
+	
+	Code along
+		==>
+	errors
+		==>fix yourself
+		==>google is your friend
+		==>Official document
+
+	Ask in QnA
+__________________________________________________________________________________________________________________________________________________________
+
+S1E3
+
+	fundamental
+		==>manifest file
+	Advanced techniques
+__________________________________________________________________________________________________________________________________________________________
+
+S1E4
+
+	Setup
+		==>nodejs
+		==>visual studio
+
+		npm -version
+		6.14.5
+
+		npm init	
+
+		==>npm i types @types/chrome
+
+		chrome://extensions
+
+			==>turn on developer mode
+
+			==>wil be needing knowledge of JS and Jquery
+
+
+__________________________________________________________________________________________________________________________________________________________
+
+S2E1
+
+manifest file
+
+	==>bookmark extension page
+
+==>create manifest.json
+	//will tell about about meta data
+
+{
+	"name": "my first extension",
+	"version": "1.0.0",
+	"description": "This is my very first extension",
+	"manifest_version": 2
+
+	//we can have images n all n icons
+}
+
+
+==>go to extensions
+	==>load unpacked
+	==>navigate to code (parent of node modules)
+
+
+__________________________________________________________________________________________________________________________________________________________
+
+S2E2
+
+	extension navigate the events
+
+//in maifest.json
+	{
+	.
+	..
+	"background":{
+		"script": ["background.js"],
+		"persistent": false
+	},
+	"permissions": [
+	"bookmarks"]
+	}
+
+//ceate background.js
+
+chrome.runtime.onInstalled.addListener(()=>{
+console.log("installed");
+})
+
+//we need permission to access bookmark in manifest.json
+chrome.bookmarks.onCreated.addListener(()=>{
+	alert('bookmarked saved');
+})
+
+
+__________________________________________________________________________________________________________________________________________________________
+
+S2E3
+
+
+
+				...incomp
+
+
+
+
